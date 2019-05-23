@@ -1,0 +1,295 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+body {
+  overflow-x: hidden;
+}
+.scroll-down {
+  width: 80px;
+  height: 40px;
+  right: 10px;
+  bottom: 10px;
+  position: absolute;
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #FFFFFF;
+  opacity: 0;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+}
+.scroll-down span {
+  margin-top: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-100%, 0) rotate(45deg);
+  transform-origin: 100% 100%;
+  height: 2px;
+  width: 10px;
+  background: #FFFFFF;
+}
+.scroll-down span:nth-of-type(2) {
+  transform-origin: 0 100%;
+  transform: translate(0, 0) rotate(-45deg);
+}
+.spinner {
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  -webkit-animation: rotation .6s infinite linear;
+  -moz-animation: rotation .6s infinite linear;
+  -o-animation: rotation .6s infinite linear;
+  animation: rotation .6s infinite linear;
+  border-left: 6px solid rgba(0, 174, 239, .15);
+  border-right: 6px solid rgba(0, 174, 239, .15);
+  border-bottom: 6px solid rgba(0, 174, 239, .15);
+  border-top: 6px solid rgba(0, 174, 239, .8);
+  border-radius: 100%;
+  top: calc(50% - 100px);
+  left: calc(50% - 80px);
+  right: auto;
+  bottom: auto;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+.transparent {
+  opacity: 0;
+}
+
+figcaption {
+  padding: 0.5em;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+dt-article figcaption {
+  padding: 0.5em;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+dt-article figcaption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+dt-article figcaption b {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+*.svgunselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background: none;
+    pointer-events: none;
+}
+</style>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- roboto font -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
+<!--<script src="lib/jquery-1.12.4.min.js"></script>
+<script src="lib/mobile-detect.min.js"></script>-->
+<script src="lib/template.v1.js"></script>
+
+<script type="text/front-matter">
+  title: "Weight Agnostic Neural Networks"
+  description: ""
+</script>
+<body>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/misc/wRange_biped.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+
+<table style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
+<td width="50%"><figcaption style="text-align: center;">A weight agnostic neural network agent performing <i>BipedalWalker-v2</i> task, at various shared weight parameters.</figcaption></td>
+</tr></table>
+
+</div>
+
+<dt-article id="dtbody">
+
+<dt-byline class="l-page transparent"></dt-byline>
+<h1>Weight Agnostic Neural Networks</h1>
+<br/>
+<h2>Supplementary Videos</h2>
+<p></p>
+<dt-byline class="l-page" id="authors_section" hidden>
+<div class="byline">
+  <div class="authors">
+    <div class="author">
+        <a class="name" href="https://neurips.cc/">Anonymous</a>
+        <a class="affiliation" href="https://neurips.cc">Submission</a>
+    </div>
+  </div>
+  <div class="date">
+    <div class="month">May 23</div>
+    <div class="year">2019</div>
+  </div>
+</div>
+</dt-byline>
+</dt-byline><h2>Abstract</h2>
+<p>Not all neural network architectures are created equal, some perform much better than others for certain tasks. But how important are the weight parameters of a neural network compared to its architecture? In this work, we question to what extent neural network architectures alone, without learning any weight parameters, can encode solutions for a given task. We propose a search method for neural network architectures that can already perform a task without any explicit weight training. To evaluate these networks, we populate the connections with a single shared weight parameter sampled from a uniform random distribution, and measure the expected performance. We demonstrate that our method can find minimal neural network architectures that can perform several reinforcement learning tasks without weight training. On supervised learning domain, we find network architectures that can achieve much higher than chance accuracy on MNIST using random weights.</p>
+<hr>
+<h2>Cartpole Swingup</h2>
+<p>text</p>
+<div style="text-align: center;">
+<img src="assets/swing/swing_08_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<figcaption style="text-align: left;">Generation 8</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_08_-0.5.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 8, weight set to -0.5</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_08_1.5.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 8, weight set to +1.5</i>.</figcaption>
+</div>
+<p>text</p>
+<div style="text-align: center;">
+<img src="assets/swing/swing_32_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<figcaption style="text-align: left;">Generation 32</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_32_-1.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 32, weight set to -1.0</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_32_1.5.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 32, weight set to +1.5</i>.</figcaption>
+</div>
+<p>text</p>
+<div style="text-align: center;">
+<img src="assets/swing/swing_128_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<figcaption style="text-align: left;">Generation 128</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_128_-0.75.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 128, weight set to -0.75</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_128_2.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 128, weight set to +2.0</i>.</figcaption>
+</div>
+<p>text</p>
+<div style="text-align: center;">
+<img src="assets/swing/swing_1024_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<figcaption style="text-align: left;">Generation 1024</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_1024_-2.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 1024, weight set to -2.0</i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/swing/swing_1024_1.gif" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Generation 1024, weight set to +1.0</i>.</figcaption>
+</div>
+<h2>Bipedal Walker</h2>
+<div style="text-align: center;">
+<img src="assets/biped/net_biped.png" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Champion Network for <i>BipedalWalker-v2</i></i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/biped/trial_biped_-2.0.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Weight set to -2.0</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/biped/trial_biped_-1.5.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Weight set to -1.5</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/misc/trial_example_biped_-1.0.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Weight set to -1.0</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/biped/trial_biped_failures.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Failure cases at other weight values.</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/misc/trial_balancer.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">At non-optimal weights, it performed non trivial actions like balancing.</figcaption>
+</div>
+<div style="text-align: center;">
+<img src="assets/misc/net_outConns.png" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">WANN discovered if we allow connection between outputs.</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/misc/trial_outConns_-1.0.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Rollout of policy using above network, weight set to -1.0</figcaption>
+</div>
+<h2>Car Racing from Pixels</h2>
+<div style="text-align: center;">
+<img src="assets/carracing/net_race.png" style="display: block; margin: auto; width: 100%;"/>
+<figcaption style="text-align: left;">Champion Network for <i>CarRacing-v0</i></i>.</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/carracing/trial_racer_-1.4.800px.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Weight set to -1.4</figcaption>
+</div>
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/carracing/trial_racer_+1.0.800px.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Weight set to +1.0</figcaption>
+</div>
+</dt-article>
+<dt-appendix>
+<h2>Open Source Code</h2>
+<p>The instructions to reproduce the experiments in this work is available <a href="https://github.com/anonwann/wann_neurips">here</a>.</p>
+</dt-appendix>
+</dt-appendix>
+</body>
+<script type="text/bibliography">
+@ARTICLE{openai_gym,
+  author = {Brockman, G. and Cheung, V. and Pettersson, L. and Schneider, J. and Schulman, J. and Tang, J. and Zaremba, W.},
+  title={OpenAI Gym},
+  journal={Preprint arXiv:1606.01540},
+  year = 2016,
+  month = jun,
+  url = {https://arxiv.org/abs/1606.01540},
+}
+</script>
+<script src="lib/blazy.js"></script>
+<script>
+  // blazy code
+  var bLazy = new Blazy({
+    success: function(){
+      updateCounter();
+    }
+  });
+
+  // not needed, only here to illustrate amount of loaded images
+  var imageLoaded = 0;
+
+  function updateCounter() {
+    imageLoaded++;
+    console.log("blazy image loaded: "+imageLoaded);
+  }
+</script>
