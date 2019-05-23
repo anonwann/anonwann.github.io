@@ -6,8 +6,6 @@ ______
 
 ## Cartpole Swingup
 
-text
-
 <div style="text-align: center;">
 <img src="assets/swing/swing_08_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
 <figcaption style="text-align: left;">Generation 8</i>.</figcaption>
@@ -22,8 +20,6 @@ text
 <img src="assets/swing/swing_08_1.5.gif" style="display: block; margin: auto; width: 100%;"/>
 <figcaption style="text-align: left;">Generation 8, weight set to +1.5</i>.</figcaption>
 </div>
-
-text
 
 <div style="text-align: center;">
 <img src="assets/swing/swing_32_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
@@ -40,8 +36,6 @@ text
 <figcaption style="text-align: left;">Generation 32, weight set to +1.5</i>.</figcaption>
 </div>
 
-text
-
 <div style="text-align: center;">
 <img src="assets/swing/swing_128_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
 <figcaption style="text-align: left;">Generation 128</i>.</figcaption>
@@ -57,11 +51,9 @@ text
 <figcaption style="text-align: left;">Generation 128, weight set to +2.0</i>.</figcaption>
 </div>
 
-text
-
 <div style="text-align: center;">
 <img src="assets/swing/swing_1024_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
-<figcaption style="text-align: left;">Generation 1024</i>.</figcaption>
+<figcaption style="text-align: left;">Generation 1024 (Champion network)</i>.</figcaption>
 </div>
 
 <div style="text-align: center;">
@@ -72,6 +64,11 @@ text
 <div style="text-align: center;">
 <img src="assets/swing/swing_1024_1.gif" style="display: block; margin: auto; width: 100%;"/>
 <figcaption style="text-align: left;">Generation 1024, weight set to +1.0</i>.</figcaption>
+</div>
+
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/finetuned/trained_swing.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Finetuned weights of champion network.</figcaption>
 </div>
 
 ## Bipedal Walker
@@ -107,6 +104,12 @@ text
 </div>
 
 <div style="text-align: center;">
+<video class="b-lazy" data-src="assets/finetuned/trained_biped.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Finetuned weights of champion network.</figcaption>
+</div>
+
+
+<div style="text-align: center;">
 <img src="assets/misc/net_outConns.png" style="display: block; margin: auto; width: 100%;"/>
 <figcaption style="text-align: left;">WANN discovered if we allow connection between outputs.</figcaption>
 </div>
@@ -133,3 +136,7 @@ text
 <figcaption style="text-align: left;">Weight set to +1.0</figcaption>
 </div>
 
+<div style="text-align: center;">
+<video class="b-lazy" data-src="assets/finetuned/trained_racer.mp4" type="video/mp4" autoplay muted playsinline loop style="display: block; margin: auto; width: 100%;" ></video>
+<figcaption style="text-align: left;">Finetuned weights of champion network.</figcaption>
+</div>
