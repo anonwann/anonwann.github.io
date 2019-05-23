@@ -8,10 +8,10 @@ ______
 
 Below are additional videos that accompany the paper. Please refer to Section 4, Experimental Results of the main text for additional information.
 
-### Cartpole Swingup
+## Cartpole Swingup
 
 <div style="text-align: center;">
-<img src="assets/swing/swing_08_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<img src="assets/swing/swing_08_fitByWeight.png" style="display: block; margin: auto; width: 75%;"/>
 <figcaption style="text-align: center;">Network and performance chart vs weight at Generation 8</i>.</figcaption>
 </div>
 
@@ -26,7 +26,7 @@ Below are additional videos that accompany the paper. Please refer to Section 4,
 </div>
 
 <div style="text-align: center;">
-<img src="assets/swing/swing_32_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<img src="assets/swing/swing_32_fitByWeight.png" style="display: block; margin: auto; width: 75%;"/>
 <figcaption style="text-align: center;">Network and performance chart vs weight at Generation 32</i>.</figcaption>
 </div>
 
@@ -41,7 +41,7 @@ Below are additional videos that accompany the paper. Please refer to Section 4,
 </div>
 
 <div style="text-align: center;">
-<img src="assets/swing/swing_128_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
+<img src="assets/swing/swing_128_fitByWeight.png" style="display: block; margin: auto; width: 75%;"/>
 <figcaption style="text-align: center;">Network and performance chart vs weight at Generation 128</i>.</figcaption>
 </div>
 
@@ -56,8 +56,8 @@ Below are additional videos that accompany the paper. Please refer to Section 4,
 </div>
 
 <div style="text-align: center;">
-<img src="assets/swing/swing_1024_fitByWeight.png" style="display: block; margin: auto; width: 70%;"/>
-<figcaption style="text-align: center;">Network and performance chart vs weight at Generation 1024 (Champion network)</i>.</figcaption>
+<img src="assets/swing/swing_1024_fitByWeight.png" style="display: block; margin: auto; width: 75%;"/>
+<figcaption style="text-align: center;">Network and performance chart vs weight at Generation 1024 (champion network)</i>.</figcaption>
 </div>
 
 <div style="text-align: center;">
@@ -75,11 +75,16 @@ Below are additional videos that accompany the paper. Please refer to Section 4,
 <figcaption style="text-align: center;">Finetuned weights of champion network.</figcaption>
 </div>
 
-### Bipedal Walker
+## Bipedal Walker
+
+<div style="text-align: center;">
+<img src="assets/biped/biped_WeightByFitNet.png" style="display: block; margin: auto; width: 75%;"/>
+<figcaption style="text-align: center;">Network and performance chart vs weight of Bipedal Walker agent as shown in Figure 1 of the main text.</i></figcaption>
+</div>
 
 <div style="text-align: center;">
 <img src="assets/biped/net_biped.png" style="display: block; margin: auto; width: 100%;"/>
-<figcaption style="text-align: center;">Champion Network for <i>BipedalWalker-v2</i></i>.</figcaption>
+<figcaption style="text-align: center;">The more complicated champion network for <i>BipedalWalker-v2</i></i> found in later generations.</figcaption>
 </div>
 
 <div style="text-align: center;">
@@ -123,16 +128,16 @@ Below are additional videos that accompany the paper. Please refer to Section 4,
 <figcaption style="text-align: center;">Rollout of policy using above network, weight set to -1.0</figcaption>
 </div>
 
-### Car Racing from Pixels
+## Car Racing from Pixels
 
 <div style="text-align: center;">
 <img src="assets/carracing/net_race.png" style="display: block; margin: auto; width: 100%;"/>
-<figcaption style="text-align: center;">Champion Network for <i>CarRacing-v0</i></i>.</figcaption>
+<figcaption style="text-align: center;">Champion network for <i>CarRacing-v0</i></i>.</figcaption>
 </div>
 
 <div style="text-align: center;">
 <img src="assets/carracing/raceWeightByFit.png" style="display: block; margin: auto; width: 75%;"/>
-<figcaption style="text-align: center;">Mean Cumulative Reward vs Weight.</figcaption>
+<figcaption style="text-align: center;">Mean Cumulative Reward vs Weight for champion network.</figcaption>
 </div>
 
 <div style="text-align: center;">
